@@ -27,14 +27,14 @@ public class DatabaseProxy {
 
 	private void createCourseSessions(){
 		LocalDateTime[] dts = {
-				LocalDateTime.of(2016, Month.OCTOBER, 19, 14, 0),
-				LocalDateTime.of(2016, Month.OCTOBER, 18, 14, 0),
-				LocalDateTime.of(2016, Month.OCTOBER, 20, 14, 0)
+				LocalDateTime.of(2016, Month.OCTOBER, 25, 14, 0),
+				LocalDateTime.of(2016, Month.OCTOBER, 26, 14, 0),
+				LocalDateTime.of(2016, Month.OCTOBER, 27, 14, 0)
 		};
 		CourseSession[] css = {
 				new CourseSession(courses[0], dts[0], 2),
 				new CourseSession(courses[0], dts[1], 2),
-				new CourseSession(courses[1], dts[2], 4)
+				new CourseSession(courses[1], dts[2], 6)
 		};
 	}
 }

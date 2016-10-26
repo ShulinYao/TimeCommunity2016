@@ -22,8 +22,8 @@ public class ScheduleEventBox extends CustomComponent{
 		label = new Label(text);
 		label.setPrimaryStyleName(labelClassname);
 		outermost.setContent(label);
-		outermost.setSizeFull();
-		label.setSizeFull();
+		//outermost.setSizeFull();
+		//label.setSizeFull();
 		setCompositionRoot(outermost);
 		//this.courseSession = courseSession;
 	}

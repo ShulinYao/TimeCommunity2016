@@ -35,10 +35,16 @@ public class DayArea extends TimelineLayout{
 			sebHeight = minutesToHeight(cs.getDurationMinutes());
 			seb = new ScheduleEventBox(cs.getCourse().getName());
 			seb.setHeight(sebHeight + "px");
+			p("duration is " + cs.getDurationMinutes() + ", height is " + sebHeight + " ");
 			seb.setWidth(da.getWidth() + "px");
-			da.addComponent(seb, "top: " + sebBeginningPos + "px; left: 0px");
+			//DOESN'T WORK
+			da.addComponent(seb, "top: " + sebBeginningPos + "px; bottom: 1000px; left: 0px");
 			//p("adding ScheduleEventComponent to top position " + sebBeginningPos + "to da");
 		}
+	}
+	
+	private void p(String s){
+		System.out.print(s);
 	}
 	
 }
