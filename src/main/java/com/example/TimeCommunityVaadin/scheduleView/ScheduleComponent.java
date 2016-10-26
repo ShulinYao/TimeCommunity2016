@@ -45,6 +45,7 @@ import com.vaadin.ui.VerticalLayout;
 //!firstTimeOfDay.equals(exclLastTimeOfDay) unless both are midnight. &&
 //firstTimeOfDay.minutes == lastTimeOfDay.minutes == 0
 
+@Theme("mytheme")
 public class ScheduleComponent extends CustomComponent{
 	
 	private Course[] courses;

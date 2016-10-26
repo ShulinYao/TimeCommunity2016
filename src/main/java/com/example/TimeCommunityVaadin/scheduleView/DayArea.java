@@ -4,10 +4,12 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+import com.vaadin.annotations.Theme;
 import com.vaadin.ui.AbsoluteLayout;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Panel;
 
+@Theme("mytheme")
 public class DayArea extends TimelineLayout{
 	
 	//private final AbsoluteLayout absLo;

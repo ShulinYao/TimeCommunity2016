@@ -1,5 +1,6 @@
 package com.example.TimeCommunityVaadin;
 
+import com.example.TimeCommunityVaadin.scheduleView.*;
 import com.vaadin.data.Property;
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.ui.CustomComponent;
@@ -32,6 +33,7 @@ public class TimeCommunity extends CustomComponent implements Property.ValueChan
 		hsplit.setFirstComponent(itemSelect);
 		
 		vlayout.addComponents(title,hsplit);
+		vlayout.addComponent(new ScheduleEventBox("Test Box"));
 		setCompositionRoot(vlayout);
 		
 		
@@ -41,6 +43,15 @@ public class TimeCommunity extends CustomComponent implements Property.ValueChan
 	public void valueChange(ValueChangeEvent event) {
 		// TODO Auto-generated method stub'
 		Notification.show(event.getProperty().getValue().toString());
-		
+		if(event.getProperty().getValue().toString() == "My Schedule"){
+			hsplit.setSecondComponent(initializeScheduleComponent());
+		}
+	}
+	
+	private ScheduleComponent initializeScheduleComponent(){
+		//Courses have to be retrieved from a database class, which is connected to database
+		Course[] courses = new DatabaseProxy().getCourses();
+		ScheduleComponent sc = new ScheduleComponent(courses);
+		return sc;
 	}
 }

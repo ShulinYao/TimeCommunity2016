@@ -35,4 +35,19 @@
   @include valo;
 
   // Insert your own theme rules here
+  .schedule-event-box-panel{
+  	border-radius: 0px;
+  	margin: 0px;
+  }
+  .schedule-event-box{
+  	border-radius: 0px;
+  	margin: 0px;
+  }
+  .schedule-event-box-label{
+	background-color: yellow;  
+  }
+  .v-panel{
+  	border-radius: 0px;
+  	margin: 0px;
+  }
 }
