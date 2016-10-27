@@ -25,9 +25,10 @@ public class TimelineLayout extends AbsoluteLayout{
 				t = t.plusHours(1)){
 			vPos = this.getVerticalPositionByTime(t);
 			p = new Panel();
+			p.addStyleName("schedule-component-filler-panel");
 			p.setHeight(hourHeight + "px");
 			p.setWidth(da.getWidth() + "px");
-			da.addComponent(p, "top: " + vPos);
+			da.addComponent(p, "top: " + vPos + "; z-index: -10;");
 			//in case that t never exceeds lastTimeOfDay because lastTimeOfDay is the last possible
 			//time of a day, check if t has gone past midnight
 			if(t.plusHours(1).isBefore(t)) break;
@@ -46,7 +47,6 @@ public class TimelineLayout extends AbsoluteLayout{
 		TimelineLayout da = this;
 		assert firstTime.isAfter(exclLastTime) ||
 				firstTime.equals(exclLastTime);
-		//TOIMIIKO UUDELLA VIIMEISEN AJAN MÄÄRITTELYLLÄ?
 		int totalMinutes = getMinutesDifference(this.firstTime, this.exclLastTime);
 		//p("minutes difference is " + totalMinutes);
 		double daHeight = (double) da.getHeight();

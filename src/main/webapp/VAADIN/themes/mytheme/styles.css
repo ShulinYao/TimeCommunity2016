@@ -12967,3 +12967,19 @@ div.v-layout.v-horizontal.v-widget {
 	width: 19px;
 	overflow: hidden;
 }
+
+.mytheme .schedule-event-box-panel {
+	background: orange;
+	border-radius: 0px;
+	margin: 0px;
+}
+
+.mytheme .schedule-event-box {
+	border-radius: 0px;
+	margin: 0px;
+}
+
+.mytheme .schedule-component-filler-panel {
+	border-radius: 0px;
+	margin: 0px;
+}
