@@ -9,11 +9,13 @@ import com.thoughtworks.xstream.io.xml.StaxDriver;
 import javax.xml.parsers.*;
 import java.io.*;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class File {
 
+	private final String path = "DataFile.xml";
 	private final XStream xs;
 	
 	public File(){
@@ -63,8 +65,8 @@ public class File {
 	}
 	
 	private String read() throws IOException{
-		String path;
-		Charset encoding;
+		String path = this.path;
+		Charset encoding = StandardCharsets.UTF_8;
 		byte[] encoded = Files.readAllBytes(Paths.get(path));
 		return new String(encoded, encoding);
 	}
