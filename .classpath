@@ -30,10 +30,14 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/classes" path="target/generated-resources/gwt">
 		<attributes>
+			<attribute name="ignore_optional_problems" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="ignore_optional_problems" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/xstream-1.4.9.jar"/>
+	<classpathentry kind="lib" path="lib/xstream-benchmark-1.4.9.jar"/>
+	<classpathentry kind="lib" path="lib/xstream-hibernate-1.4.9.jar"/>
+	<classpathentry kind="lib" path="lib/xstream-jmh-1.4.9.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
