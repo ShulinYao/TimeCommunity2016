@@ -24,6 +24,7 @@ public class AddCourseDesign extends VerticalLayout {
 	protected TextField course;
 	protected TextField courseCode;
 	protected DateField time;
+	protected DateField endTime;
 	protected TextField location;
 	protected TextArea introduction;
 	protected Button completebutton;

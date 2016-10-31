@@ -8,9 +8,9 @@ public class Course {
 
 	private String name;
 	private String shortDescription = "";
-	private String moreInformation = "";
+	private String moreInformation = ""; // Not in use
 	private String time = "";
-	private String location = "";
+	private String location = ""; // Not in use
 	private ArrayList<CourseSession> courseSessions;
 	//private Comment[] comments;
 	
