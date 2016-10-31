@@ -20,13 +20,15 @@ public class File {
 	
 	public File(){
 		xs = new XStream(new StaxDriver());
+		LocalDateTimeConverter ldtc = new LocalDateTimeConverter();
+		xs.registerConverter(ldtc);
 	}
 	
 	private void initialize() throws ParserConfigurationException, SAXException, IOException {
 		//Create a DocumentBuilder
-		DocumentBuilderFactory factory =
-		DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder = factory.newDocumentBuilder();
+//		DocumentBuilderFactory factory =
+//		DocumentBuilderFactory.newInstance();
+//		DocumentBuilder builder = factory.newDocumentBuilder();
 		
 		//Create a Document from a file or stream
 		//StringBuilder xmlStringBuilder = new StringBuilder();
@@ -57,11 +59,42 @@ public class File {
 		Course[] courses = db.getCourses();
 		String xml = xs.toXML(courses);
 		System.out.println(xml);
-		write(xml);
+		try{
+			write(xml);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 	
-	private void write(String s){
-		
+	public String retrieveDataString(){
+		try {
+			return read();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return "Error occurred when reading from file.";
+	}
+	
+	//MUTTETTAVA MYÖHEMMIN
+	public Course[] retrieveAllData(){
+		String xml = retrieveDataString();
+		//DatabaseProxy dbp = (DatabaseProxy)xs.fromXML(xml);
+		//return dbp;
+		return (Course[])xs.fromXML(xml);
+	}
+	
+	public Course[] retrieveCourses(){
+		String xml = retrieveDataString();
+		return (Course[])xs.fromXML(xml);
+	}
+	
+	private void write(String s) throws UnsupportedEncodingException,
+			FileNotFoundException, IOException{
+		String path = this.path;
+		try (Writer writer = new BufferedWriter(new OutputStreamWriter(
+	              new FileOutputStream(path), "utf-8"))) {
+			writer.write(s);
+		}
 	}
 	
 	private String read() throws IOException{

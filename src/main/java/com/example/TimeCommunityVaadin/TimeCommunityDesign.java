@@ -40,9 +40,14 @@ public class TimeCommunityDesign extends AbsoluteLayout implements Property.Valu
 		listview.select("Community");
 		
 		//TEST
-		File f = new File();
-		DatabaseProxy dbp = new DatabaseProxy();
-		f.saveData(dbp);
+		//File f = new File();
+		//DatabaseProxy dbp = new DatabaseProxy();
+		//f.saveData(dbp);
+		//System.out.println("Data read form file: " + f.retrieveDataString());
+		//dbp = f.retrieveAllData();
+		//dbp.getCourses()[1].getName();'
+		//Course[] courses = f.retrieveAllData();
+		//System.out.print("second course: " + courses[1].getName());
 	}
 
 	@Override
@@ -70,7 +75,8 @@ public class TimeCommunityDesign extends AbsoluteLayout implements Property.Valu
 			break;
 		case"My Event":
 			             communitylayout.removeAllComponents();
-			             Notification.show(listviewstr+"halp hahaha!!!!");
+			             Notification.show("We could not implement " + listviewstr + 
+			            		 " feature before the deadline.");
 			break;
 		default:
 			break;
@@ -79,8 +85,8 @@ public class TimeCommunityDesign extends AbsoluteLayout implements Property.Valu
 	
 	private ScheduleComponent initializeScheduleComponent(){
 		//Courses have to be retrieved from a database class, which is connected to database
-		Course[] courses = new DatabaseProxy().getCourses();
-		ScheduleComponent sc = new ScheduleComponent(courses);
-		return sc;
+		//Course[] courses = new DatabaseProxy().getCourses();
+		//ScheduleComponent sc = new ScheduleComponent(courses);
+		return new ScheduleComponent();
 	}
 }
