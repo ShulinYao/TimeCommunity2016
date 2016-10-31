@@ -23,7 +23,8 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         final AbsoluteLayout layout = new AbsoluteLayout();
-        TimeCommunityDesign community=new TimeCommunityDesign();
+        //TimeCommunityDesign community=new TimeCommunityDesign();
+        TimeCommunityView community = new TimeCommunityView();
       
         layout.addComponent(community);
         layout.setSizeFull();
