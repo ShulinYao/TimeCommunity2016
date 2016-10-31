@@ -28,7 +28,7 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 		switch(listviewstr){
 		
 		case"Community": 
-			             CommunityViewDesign communityview=new CommunityViewDesign();
+			             CommunityViewDesign communityview=new CommunityViewView();
 			             communitylayout.removeAllComponents();
 		                 communitylayout.addComponent(communityview);
 		                 hsplit.setSecondComponent(communitylayout);

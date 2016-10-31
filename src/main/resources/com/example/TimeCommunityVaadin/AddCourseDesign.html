@@ -4,13 +4,74 @@
   <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
  </head> 
  <body> 
-  <vaadin-vertical-layout width="350px" height="400px"> 
+  <vaadin-vertical-layout width="350px" height="810px"> 
    <vaadin-form-layout width="352px" height="278px" margin-top="false" margin-bottom="false"> 
     <vaadin-text-field caption="Course" required immediate _id="course"></vaadin-text-field> 
     <vaadin-text-field caption="Course Code" required immediate _id="courseCode"></vaadin-text-field> 
-    <vaadin-date-field caption="Start time" required immediate _id="time"></vaadin-date-field> 
-    <vaadin-date-field caption="End time" required immediate _id="endTime"></vaadin-date-field> 
-    <vaadin-text-field caption="Location" required immediate _id="location"></vaadin-text-field> 
+    <vaadin-date-field caption="Start date" required immediate _id="time"></vaadin-date-field> 
+    <vaadin-date-field caption="End date" required immediate _id="endTime"></vaadin-date-field> 
+    <vaadin-label size-auto plain-text>
+      First weekly lecture 
+    </vaadin-label> 
+    <vaadin-combo-box caption="Start time" item-caption-mode="id" _id="startTimeOfDay"> 
+     <option>8</option> 
+     <option>9</option> 
+     <option>11</option> 
+     <option>12</option> 
+     <option>13</option> 
+     <option>14</option> 
+     <option>15</option> 
+     <option>16</option> 
+     <option>17</option> 
+     <option>18</option> 
+     <option>19</option> 
+     <option>20</option> 
+    </vaadin-combo-box> 
+    <vaadin-combo-box caption="Duration hours" item-caption-mode="id" _id="durationHours"> 
+     <option>1</option> 
+     <option>2</option> 
+     <option>3</option> 
+     <option>4</option> 
+    </vaadin-combo-box> 
+    <vaadin-combo-box caption="Week day" item-caption-mode="id" _id="weekDay"> 
+     <option>Mon</option> 
+     <option>Tue</option> 
+     <option>Wed</option> 
+     <option>Thu</option> 
+     <option>Fri</option> 
+    </vaadin-combo-box> 
+    <vaadin-text-field caption="Location" required immediate_id="location"></vaadin-text-field> 
+    <vaadin-label size-auto plain-text>
+      Second weekly lecture (optional) 
+    </vaadin-label> 
+    <vaadin-combo-box caption="Start time" item-caption-mode="id" _id="startTimeOfDay2"> 
+     <option>8</option> 
+     <option>9</option> 
+     <option>11</option> 
+     <option>12</option> 
+     <option>13</option> 
+     <option>14</option> 
+     <option>15</option> 
+     <option>16</option> 
+     <option>17</option> 
+     <option>18</option> 
+     <option>19</option> 
+     <option>20</option> 
+    </vaadin-combo-box> 
+    <vaadin-combo-box caption="Duration hours" item-caption-mode="id" _id="durationHours2"> 
+     <option>1</option> 
+     <option>2</option> 
+     <option>3</option> 
+     <option>4</option> 
+    </vaadin-combo-box> 
+    <vaadin-combo-box caption="Week day" item-caption-mode="id" _id="weekDay2"> 
+     <option>Mon</option> 
+     <option>Tue</option> 
+     <option>Wed</option> 
+     <option>Thu</option> 
+     <option>Fri</option> 
+    </vaadin-combo-box> 
+    <vaadin-text-field caption="Location" _id="location2"></vaadin-text-field> 
     <vaadin-text-area caption="Introduction" width="200px" height="70px" _id="introduction"></vaadin-text-area> 
     <vaadin-horizontal-layout spacing width="210px" height="45px" :center> 
      <vaadin-button width="106px" height="37px" plain-text _id="completebutton">
