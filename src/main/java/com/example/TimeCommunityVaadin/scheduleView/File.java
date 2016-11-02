@@ -4,6 +4,7 @@ import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
 
 import javax.xml.parsers.*;
@@ -19,7 +20,7 @@ public class File {
 	private final XStream xs;
 	
 	public File(){
-		xs = new XStream(new StaxDriver());
+		xs = new XStream(new DomDriver());
 		LocalDateTimeConverter ldtc = new LocalDateTimeConverter();
 		xs.registerConverter(ldtc);
 	}
@@ -58,7 +59,7 @@ public class File {
 	public void saveData(DatabaseProxy db){
 		Course[] courses = db.getCourses();
 		String xml = xs.toXML(courses);
-		System.out.println(xml);
+		System.out.println("Saving: " + xml);
 		try{
 			write(xml);
 		}catch(Exception e){

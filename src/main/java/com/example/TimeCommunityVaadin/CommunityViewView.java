@@ -29,7 +29,8 @@ public class CommunityViewView extends CommunityViewDesign implements Button.Cli
         layout.setSizeFull();*/
 		//UI.addWindow(subwindow);
 		//AddCourseDesign addcourseview=new AddCourseDesign();
-		AddCourseView addcourseview = new AddCourseView();
+		AddCourseView addcourseview = new AddCourseView(
+				() -> UI.getCurrent().removeWindow(subwindow));
 		subwindow.setContent(addcourseview);
 		UI.getCurrent().addWindow(subwindow);
 	
