@@ -3,22 +3,50 @@ package com.example.TimeCommunityVaadin.scheduleView;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 //This class is only for testing and can be replaced by a class which has access to the database.
+//It is assumed that only this program edits the DataFile.xml.
 public class DatabaseProxy {
 	
-	private Course[] courses;
+	private static final DatabaseProxy databaseProxy = new DatabaseProxy();
 	
-	public DatabaseProxy(){
-		courses = createCourses();
-		createCourseSessions();
+	private Course[] courses; //EI KÄYTÖSSÄ
+	private final File file;
+	
+	public static DatabaseProxy getDatabaseProxy(){
+		return databaseProxy;
+	}
+	
+	private DatabaseProxy(){
+		file = new File();
+		this.courses = retrieveCourses();
+		//courses = createCourses();
+		//createCourseSessions();
 	}
 	
 	public Course[] getCourses(){
+		//Course[] courses = file.retrieveCourses();
+		//this.courses = courses;
+		return this.courses;
+	}
+	
+	public void addCourse(Course newCourse){
+		Course[] currentCourses = getCourses();
+		ArrayList<Course> ccal = new ArrayList<Course>(Arrays.asList(currentCourses));
+		ccal.add(newCourse);
+		Course[] allCourses = ccal.toArray(new Course[0]);
+		this.courses = allCourses;
+		file.saveData(this);
+	}
+	
+	private Course[] retrieveCourses(){
+		Course[] courses = file.retrieveCourses();
 		return courses;
 	}
 	
+	//HYÖDYTTÖMIÄ
 	private Course[] createCourses(){
 		Course c1 = new Course("Test Course");
 		Course c2 = new Course("Golf Course");

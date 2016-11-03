@@ -1,0 +1,278 @@
+<com.example.TimeCommunityVaadin.scheduleView.Course-array>
+  <com.example.TimeCommunityVaadin.scheduleView.Course>
+    <name>Test Course</name>
+    <shortDescription></shortDescription>
+    <moreInformation></moreInformation>
+    <time></time>
+    <location></location>
+    <courseSessions>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-10-25T14:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora 110C</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-10-26T14:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora 110C</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+    </courseSessions>
+  </com.example.TimeCommunityVaadin.scheduleView.Course>
+  <com.example.TimeCommunityVaadin.scheduleView.Course>
+    <name>Golf Course</name>
+    <shortDescription></shortDescription>
+    <moreInformation></moreInformation>
+    <time></time>
+    <location></location>
+    <courseSessions>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-10-25T14:30</time>
+        <durationHours>2</durationHours>
+        <location>Agora 110B</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-10-27T14:00</time>
+        <durationHours>6</durationHours>
+        <location>TuKKK Ls1</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+    </courseSessions>
+  </com.example.TimeCommunityVaadin.scheduleView.Course>
+  <com.example.TimeCommunityVaadin.scheduleView.Course>
+    <name>Asd</name>
+    <shortDescription></shortDescription>
+    <moreInformation></moreInformation>
+    <time></time>
+    <location></location>
+    <courseSessions>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-03T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-04T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-05T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-06T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-07T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-08T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-09T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-10T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-11T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-12T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-13T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-14T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-15T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-16T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-17T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-18T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-19T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-20T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-21T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-22T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-23T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-24T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-25T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-26T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-27T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-28T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-29T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-30T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-12-01T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-12-02T11:00</time>
+        <durationHours>2</durationHours>
+        <location>Agora</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+    </courseSessions>
+  </com.example.TimeCommunityVaadin.scheduleView.Course>
+  <com.example.TimeCommunityVaadin.scheduleView.Course>
+    <name>ASDSD</name>
+    <shortDescription></shortDescription>
+    <moreInformation></moreInformation>
+    <time></time>
+    <location></location>
+    <courseSessions>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-22T15:00</time>
+        <durationHours>3</durationHours>
+        <location>TuKKKKK</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-11-29T15:00</time>
+        <durationHours>3</durationHours>
+        <location>TuKKKKK</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-12-06T15:00</time>
+        <durationHours>3</durationHours>
+        <location>TuKKKKK</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-12-13T15:00</time>
+        <durationHours>3</durationHours>
+        <location>TuKKKKK</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-12-20T15:00</time>
+        <durationHours>3</durationHours>
+        <location>TuKKKKK</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+      <com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+        <time>2016-12-27T15:00</time>
+        <durationHours>3</durationHours>
+        <location>TuKKKKK</location>
+        <course reference="../../.."/>
+      </com.example.TimeCommunityVaadin.scheduleView.CourseSession>
+    </courseSessions>
+  </com.example.TimeCommunityVaadin.scheduleView.Course>
+</com.example.TimeCommunityVaadin.scheduleView.Course-array>

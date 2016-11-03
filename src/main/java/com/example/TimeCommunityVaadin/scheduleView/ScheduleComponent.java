@@ -63,10 +63,13 @@ public class ScheduleComponent extends CustomComponent{
 	private final HoursColumn hoursColumn;
 	private final WeekNavigationComponent weekNavigationComponent;
 	private final VerticalLayout mainLayout;
+	private final DatabaseProxy dbp;
 	private final int weekDaysCount = 7;
 
-	public ScheduleComponent(Course[] courses){
-		this.courses = courses;
+	public ScheduleComponent(){
+		this.dbp = DatabaseProxy.getDatabaseProxy();
+		updateCourses();
+		
 		this.mainLayout = new VerticalLayout();
         this.eventsFrame = new GridLayout(8, 2); //(8, 16);
         this.displayedWeek = getFirstDateOfWeek(LocalDate.now()); //LocalDateTime.now();
@@ -93,12 +96,21 @@ public class ScheduleComponent extends CustomComponent{
 	
 	public void onPreviousWeekButtonClick(Button.ClickEvent e){
 		LocalDate previousWeek = this.displayedWeek.plusWeeks(-1);
+		updateCourses();
 		updateTime(previousWeek);
 	}
 	
 	public void onNextWeekButtonClick(Button.ClickEvent e){
 		LocalDate nextWeek = this.displayedWeek.plusWeeks(1);
+		updateCourses();
 		updateTime(nextWeek);
+	}
+	
+	/*
+	 * Retrieves courses form file.
+	 */
+	private void updateCourses(){
+		this.courses = this.dbp.getCourses();
 	}
 	
 	private DayArea[] createDayAreas(){

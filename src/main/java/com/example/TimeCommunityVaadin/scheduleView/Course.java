@@ -1,16 +1,18 @@
 package com.example.TimeCommunityVaadin.scheduleView;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Course {
 
 	private String name;
 	private String shortDescription = "";
-	private String moreInformation = "";
+	private String moreInformation = ""; // Not in use
 	private String time = "";
-	private String location = "";
+	private String location = ""; // Not in use
 	private ArrayList<CourseSession> courseSessions;
 	//private Comment[] comments;
 	
@@ -38,6 +40,24 @@ public class Course {
 	public void addSession(CourseSession cs){
 		if(!courseSessions.contains(cs)){
 			courseSessions.add(cs);
+		}
+	}
+	
+	/*
+	 * Creates and adds CourseSessions in proper date times between startDate and endDate.
+	 * Both dates are inclusive.
+	 */
+	public void addSessions(LocalDate startDate, LocalDate endDate, LocalTime startTime,
+			int durationHours, String location, DayOfWeek dow){
+		CourseSession cs;
+		LocalDateTime ldt;
+		//int durationMinutes = durationHours * 60;
+		for(LocalDate d = startDate; d.isBefore(endDate.plusDays(1)); d = d.plusDays(1)){
+			if(d.getDayOfWeek() == dow){
+				ldt = LocalDateTime.of(d, startTime);
+				cs = new CourseSession(this, ldt, durationHours, location);
+				addSession(cs);
+			}
 		}
 	}
 
