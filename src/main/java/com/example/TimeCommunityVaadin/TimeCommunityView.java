@@ -10,20 +10,17 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 
 	public TimeCommunityView(){
 		super();
-		//System.out.println("TimeCommunityView has been created");
+		System.out.println("TimeCommunityView has been created");
 		listview.addValueChangeListener(this);
 		listview.select("Community");
 		
-		//TEST
-		//File f = new File();
-		//DatabaseProxy dbp = new DatabaseProxy();
-		//f.saveData(dbp);
 	}
 	
 	@Override
 	public void valueChange(ValueChangeEvent event) {
 		// TODO Auto-generated method stub
 		String listviewstr=event.getProperty().getValue().toString();
+		System.out.println("TimeCommunityView list view: value has been changed");
 		
 		switch(listviewstr){
 		
@@ -34,6 +31,7 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 		                 hsplit.setSecondComponent(communitylayout);
 			break;
 		case"My Schedule":
+						System.out.println("My schedule in switch");
 			             //AddCourseDesign addview=new AddCourseDesign();
 			             communitylayout.removeAllComponents();
 			             //communitylayout.addComponent(addview);
@@ -45,7 +43,7 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 			break;
 		case"My Event":
 			             communitylayout.removeAllComponents();
-			             Notification.show(listviewstr+"halp hahaha!!!!");
+			             Notification.show(listviewstr + " is not implemented.");
 			break;
 		default:
 			break;

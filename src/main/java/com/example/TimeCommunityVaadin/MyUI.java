@@ -24,6 +24,8 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
     	
+    	System.out.println("MyUI.init called");
+    	
     	// login view
         // Create a new instance of the navigator. The navigator will attach
         // itself automatically to this view.

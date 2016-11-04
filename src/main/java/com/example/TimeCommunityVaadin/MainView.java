@@ -20,15 +20,17 @@ public class MainView extends TimeCommunityDesign implements View {
     public MainView() {
         
     	//main view of time community     
-    	     	     
-    	     final AbsoluteLayout layout = new AbsoluteLayout();
-    	     TimeCommunityDesign community=new TimeCommunityDesign();
-    	    
-    	     
-    	     layout.addComponent(community);
-    	     layout.setSizeFull();
-    	     
-             setParent(layout);
+    		
+    	System.out.println("MainView has been created");
+    	final AbsoluteLayout layout = new AbsoluteLayout();
+	    //TimeCommunityDesign community=new TimeCommunityDesign();
+	    TimeCommunityView community = new TimeCommunityView();
+	    
+	     
+		layout.addComponent(community);
+		layout.setSizeFull();
+		 
+		setParent(layout);
         
     }
 
