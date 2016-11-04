@@ -3,6 +3,8 @@ package com.example.TimeCommunityVaadin;
 import com.example.TimeCommunityVaadin.scheduleView.ScheduleComponent;
 import com.vaadin.data.Property;
 import com.vaadin.data.Property.ValueChangeEvent;
+import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
+import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 
 public class TimeCommunityView extends TimeCommunityDesign implements
@@ -12,6 +14,7 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 		super();
 		System.out.println("TimeCommunityView has been created");
 		listview.addValueChangeListener(this);
+		hlayout.addComponent(new Label("Test Label"));
 		listview.select("Community");
 		
 	}

@@ -24,7 +24,7 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
     	
-    	System.out.println("MyUI.init called");
+    	//System.out.println("MyUI.init called");
     	
     	// login view
         // Create a new instance of the navigator. The navigator will attach
@@ -40,17 +40,21 @@ public class MyUI extends UI {
         //
         // Add the main view of the application
         //
-        getNavigator().addView(MainView.NAME,
-              MainView.class);
+        //System.out.println("MyUI before getNavigator.addView()");
+        MainView mainView = new MainView();
+        getNavigator().addView(MainView.NAME, mainView);
+              //MainView.class); POISTETTU
+        //System.out.println("MyUI after getNavigator.addView()");
 
         //
         // We use a view change handler to ensure the user is always redirected
         // to the login view if the user is not logged in.
         //
         getNavigator().addViewChangeListener(new ViewChangeListener() {
-
+        	
             @Override
             public boolean beforeViewChange(ViewChangeEvent event) {
+            	//System.out.println("MYUI beforeViewChange called");
 
                 // Check if a user has logged in
                 boolean isLoggedIn = getSession().getAttribute("user") != null;
@@ -77,7 +81,7 @@ public class MyUI extends UI {
             }
         });
     	
-     
+        //System.out.println("MyUI end of init");
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)

@@ -8,12 +8,13 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.Notification;
 import com.example.TimeCommunityVaadin.TimeCommunityDesign;
 public class MainView extends TimeCommunityDesign implements View {
 
-    public static final String NAME = "mainview";//Nimi muutettu tyhjästä stringistä
+    public static final String NAME = "";
 
-   // Label text = new Label();
+    //private Label text = new Label();
 
   
 
@@ -38,8 +39,9 @@ public class MainView extends TimeCommunityDesign implements View {
     public void enter(ViewChangeEvent event) {
         // Get the user name from the session
         String username = String.valueOf(getSession().getAttribute("user"));
+        Notification.show("Entered to MainView");
 
         // And show the username
-       // text.setValue("Hello " + username);
+        //text.setValue("Hello " + username);
     }
 }
