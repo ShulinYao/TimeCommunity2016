@@ -11,7 +11,7 @@ import com.vaadin.ui.Label;
 import com.example.TimeCommunityVaadin.TimeCommunityDesign;
 public class MainView extends TimeCommunityDesign implements View {
 
-    public static final String NAME = "";
+    public static final String NAME = "mainview";//Nimi muutettu tyhjästä stringistä
 
    // Label text = new Label();
 
