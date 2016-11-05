@@ -41,8 +41,10 @@ public class MyUI extends UI {
         // Add the main view of the application
         //
         //System.out.println("MyUI before getNavigator.addView()");
-        MainView mainView = new MainView();
-        getNavigator().addView(MainView.NAME, mainView);
+        //MainView mainView = new MainView();
+        TimeCommunityView tcv = new TimeCommunityView();
+        //getNavigator().addView(MainView.NAME, mainView);
+        getNavigator().addView(TimeCommunityView.NAME, tcv);
               //MainView.class); POISTETTU
         //System.out.println("MyUI after getNavigator.addView()");
 

@@ -3,18 +3,25 @@ package com.example.TimeCommunityVaadin;
 import com.example.TimeCommunityVaadin.scheduleView.ScheduleComponent;
 import com.vaadin.data.Property;
 import com.vaadin.data.Property.ValueChangeEvent;
+import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 
 public class TimeCommunityView extends TimeCommunityDesign implements
-		Property.ValueChangeListener{
+		Property.ValueChangeListener, View{
+	
+	public static final String NAME = "";
 
 	public TimeCommunityView(){
 		super();
 		System.out.println("TimeCommunityView has been created");
 		listview.addValueChangeListener(this);
 		hlayout.addComponent(new Label("Test Label"));
+		System.out.println("Title label text: " + titlelabel.getValue());
+		titlelabel.setValue("New test text");
+		System.out.println("Title label text: " + titlelabel.getValue());
+		removeComponent(titlelabel);
 		listview.select("Community");
 		
 	}
@@ -52,6 +59,16 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 			break;
 		}
 	}
+	
+	@Override
+    public void enter(ViewChangeEvent event) {
+        // Get the user name from the session
+        String username = String.valueOf(getSession().getAttribute("user"));
+        Notification.show("Entered to MainView");
+
+        // And show the username
+        //text.setValue("Hello " + username);
+    }
 	
 	private ScheduleComponent initializeScheduleComponent(){
 		//Courses have to be retrieved from a database class, which is connected to database

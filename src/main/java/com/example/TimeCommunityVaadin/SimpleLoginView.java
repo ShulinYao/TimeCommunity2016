@@ -126,7 +126,7 @@ Button.ClickListener {
 		
 		    // Navigate to main view
 		    //System.out.println("SimpleLoginView before getUI().getNavigator().navigateTo()");
-		    getUI().getNavigator().navigateTo(MainView.NAME);//
+		    getUI().getNavigator().navigateTo(TimeCommunityView.NAME);//
 		    //System.out.println("SimpleLoginView after getUI().getNavigator().navigateTo()");
 		
 		
