@@ -15,13 +15,8 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 
 	public TimeCommunityView(){
 		super();
-		System.out.println("TimeCommunityView has been created");
+		//System.out.println("TimeCommunityView has been created");
 		listview.addValueChangeListener(this);
-		hlayout.addComponent(new Label("Test Label"));
-		System.out.println("Title label text: " + titlelabel.getValue());
-		titlelabel.setValue("New test text");
-		System.out.println("Title label text: " + titlelabel.getValue());
-		removeComponent(titlelabel);
 		listview.select("Community");
 		
 	}
@@ -41,7 +36,6 @@ public class TimeCommunityView extends TimeCommunityDesign implements
 		                 hsplit.setSecondComponent(communitylayout);
 			break;
 		case"My Schedule":
-						System.out.println("My schedule in switch");
 			             //AddCourseDesign addview=new AddCourseDesign();
 			             communitylayout.removeAllComponents();
 			             //communitylayout.addComponent(addview);
@@ -64,7 +58,7 @@ public class TimeCommunityView extends TimeCommunityDesign implements
     public void enter(ViewChangeEvent event) {
         // Get the user name from the session
         String username = String.valueOf(getSession().getAttribute("user"));
-        Notification.show("Entered to MainView");
+        //Notification.show("Entered to MainView");
 
         // And show the username
         //text.setValue("Hello " + username);

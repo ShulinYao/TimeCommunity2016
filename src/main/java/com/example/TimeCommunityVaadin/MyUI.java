@@ -24,8 +24,6 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
     	
-    	//System.out.println("MyUI.init called");
-    	
     	// login view
         // Create a new instance of the navigator. The navigator will attach
         // itself automatically to this view.
@@ -40,13 +38,8 @@ public class MyUI extends UI {
         //
         // Add the main view of the application
         //
-        //System.out.println("MyUI before getNavigator.addView()");
-        //MainView mainView = new MainView();
         TimeCommunityView tcv = new TimeCommunityView();
-        //getNavigator().addView(MainView.NAME, mainView);
         getNavigator().addView(TimeCommunityView.NAME, tcv);
-              //MainView.class); POISTETTU
-        //System.out.println("MyUI after getNavigator.addView()");
 
         //
         // We use a view change handler to ensure the user is always redirected
@@ -82,8 +75,6 @@ public class MyUI extends UI {
 
             }
         });
-    	
-        //System.out.println("MyUI end of init");
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)

@@ -125,9 +125,7 @@ Button.ClickListener {
 		    getSession().setAttribute("user", username);
 		
 		    // Navigate to main view
-		    //System.out.println("SimpleLoginView before getUI().getNavigator().navigateTo()");
 		    getUI().getNavigator().navigateTo(TimeCommunityView.NAME);//
-		    //System.out.println("SimpleLoginView after getUI().getNavigator().navigateTo()");
 		
 		
 		} else {
