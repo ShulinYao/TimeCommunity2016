@@ -60,6 +60,41 @@ public class Course {
 			}
 		}
 	}
+	
+	/*
+	 * Pre-condition: CourseSessions in courseSessions list are ordered chronologically.
+	 * DOESN'T WORK PROPERLY
+	 */
+	public String getCourseTimePlaceText(){
+		CourseSession cs1 = courseSessions.get(0);
+		CourseSession cs2 = courseSessions.get(1);
+		LocalDateTime ldt1 = cs1.getTime();
+		LocalDateTime ldt2 = cs2.getTime();
+		boolean isOncePerWeek;
+		isOncePerWeek = ldt1.equals(ldt2);
+		String firstCsString = csTimeToString(ldt1, cs1.getDurationHours()) + 
+				" at " + cs1.getLocation();
+		if(isOncePerWeek){
+			return firstCsString;
+		}
+		String secondCsString = csTimeToString(ldt2, cs2.getDurationHours()) +
+				" at " + cs2.getLocation();
+		return firstCsString + ", " + secondCsString;
+//		isOncePerWeek = ldt1.equals(ldt2);
+//		String firstCsString = timeToString(ldt1) + " at " + courseSessions.get(0).getLocation();
+//		if(isOncePerWeek){
+//			return firstCsString;
+//		}
+//		for(int i = 0; i < 7; i++){
+//			
+//			ld = ld.plusDays(1);
+//		}
+	}
+	
+	private String csTimeToString(LocalDateTime ldt, int dur){
+		return ldt.getDayOfWeek().toString() + " " + ldt.getHour() + "-" +
+				ldt.getHour() + dur;
+	}
 
 	public String getName() {
 		return name;

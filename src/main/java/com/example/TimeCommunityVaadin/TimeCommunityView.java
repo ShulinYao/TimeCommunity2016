@@ -1,5 +1,8 @@
 package com.example.TimeCommunityVaadin;
 
+import java.util.EventObject;
+
+import com.example.TimeCommunityVaadin.scheduleView.Course;
 import com.example.TimeCommunityVaadin.scheduleView.ScheduleComponent;
 import com.vaadin.data.Property;
 import com.vaadin.data.Property.ValueChangeEvent;
@@ -64,10 +67,25 @@ public class TimeCommunityView extends TimeCommunityDesign implements
         //text.setValue("Hello " + username);
     }
 	
+	public void toCourseView(Course course){
+		communitylayout.removeAllComponents();//?
+		hsplit.setSecondComponent(new InspectCourseView(course));
+		listview.select(null);
+	}
+	
 	private ScheduleComponent initializeScheduleComponent(){
 		//Courses have to be retrieved from a database class, which is connected to database
 		//Course[] courses = new DatabaseProxy().getCourses();
 		//ScheduleComponent sc = new ScheduleComponent(courses);
 		return new ScheduleComponent();
 	}
+	
+//	public class ToCourseView extends EventObject{
+//		public Course course;
+//		public ToCourseView(Object source, Course course){
+//			super(source);
+//			this.course = course;
+//		}
+//		
+//	}
 }

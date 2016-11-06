@@ -1,7 +1,9 @@
 package com.example.TimeCommunityVaadin.scheduleView;
 
+import com.example.TimeCommunityVaadin.TimeCommunityView;
 import com.vaadin.annotations.Theme;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
@@ -15,6 +17,7 @@ public class ScheduleEventBox extends CustomComponent{
 	private final Panel outermost;
 	private final Button label;//Label label;
 	private final CourseSession courseSession;
+	//private Runnable toCourseView;
 	//private int layoutHeight;
 	
 	public ScheduleEventBox(String text, CourseSession courseSession){
@@ -29,10 +32,23 @@ public class ScheduleEventBox extends CustomComponent{
 		label.setSizeFull();
 		setCompositionRoot(outermost);
 		this.courseSession = courseSession;
+		//this.toCourseView = toCourseView;
 	}
 	
 	private void onCourseSessionButtonClick(Button.ClickEvent e){
 		Notification.show("To course view of " + courseSession.getCourse().getName());
+		TimeCommunityView tcv = getTCV();
+		tcv.toCourseView(courseSession.getCourse());
+	}
+	
+	private TimeCommunityView getTCV(){
+		Component c = this;
+		while(true){
+			c = c.getParent();
+			if(c instanceof TimeCommunityView){
+				return (TimeCommunityView) c;
+			}
+		}
 	}
 	
 }
