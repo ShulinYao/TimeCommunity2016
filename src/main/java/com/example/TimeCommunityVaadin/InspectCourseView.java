@@ -12,7 +12,8 @@ public class InspectCourseView extends InspectCourseDesign{
 		//Course id not implemented
 		//Label courseId = new Label(course.getCourseId());
 		//courseId.setCaption("Course id");
-		Label timeAndPlace = new Label(course.getCourseTimePlaceText());
+		Label timeAndPlace = new Label(course.getCourseTimePlaceText() + " (May be false "
+				+ "information. We didn't have enough time to fix this bug)");
 		timeAndPlace.setCaption("Time and place");
 		Label introduction = new Label(course.getShortDescription());
 		introduction.setCaption("Description");
