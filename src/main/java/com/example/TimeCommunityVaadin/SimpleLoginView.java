@@ -38,13 +38,14 @@ Button.ClickListener {
 		user.addValidator(new EmailValidator(
 		        "Username must be an email address"));//check whether it is an email address
 		user.setInvalidAllowed(false);
+		user.setValue("boom@abo.fi");//For demo
 		
 		// Create the password input field
 		password = new PasswordField("Password:");
 		password.setWidth("300px");
 		password.addValidator(new PasswordValidator());
 		password.setRequired(true);
-		password.setValue("");
+		password.setValue("timecommunity123");//For demo
 		password.setNullRepresentation("");
 		
 		// Create login button

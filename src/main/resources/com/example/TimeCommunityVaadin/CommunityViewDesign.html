@@ -5,10 +5,13 @@
   <meta charset="UTF-8" name="package-mapping" content="com_example_timecommunityvaadin:com.example.TimeCommunityVaadin">
  </head> 
  <body> 
-  <vaadin-absolute-layout caption="secondcomponentlayout" immediate width="700px" height="500px"> 
-   <vaadin-button immediate width="50px" height="40px" plain-text _id="addbutton" :top="450px" :right="200px" :left="620px">
-     + 
+  <vaadin-vertical-layout caption="secondcomponentlayout"> 
+   <vaadin-label size-auto plain-text>
+     This view displays all courses 
+   </vaadin-label> 
+   <vaadin-button immediate plain-text _id="addbutton">
+     Create new course
    </vaadin-button> 
-  </vaadin-absolute-layout>  
+  </vaadin-vertical-layout>  
  </body>
 </html>

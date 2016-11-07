@@ -91,6 +91,13 @@ public class Course {
 //		}
 	}
 	
+	/*
+	 * Pre-condition: CourseSessions in courseSessions list are ordered chronologically.
+	 */
+	public LocalDate getStartDate(){
+		return courseSessions.get(0).getTime().toLocalDate();
+	}
+	
 	private String csTimeToString(LocalDateTime ldt, int dur){
 		return ldt.getDayOfWeek().toString() + " " + ldt.getHour() + "-" +
 				ldt.getHour() + dur;

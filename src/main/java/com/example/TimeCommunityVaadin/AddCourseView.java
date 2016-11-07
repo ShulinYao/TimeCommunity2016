@@ -56,7 +56,8 @@ public class AddCourseView extends AddCourseDesign{
 		DatabaseProxy dbp = DatabaseProxy.getDatabaseProxy();
 		dbp.addCourse(c1);
 		
-		if(startTimeOfDay2.getValue() != null){
+		if(startTimeOfDay2.getValue() != null && durationHours2 != null && weekDay2.getValue() !=
+				null && location2.getValue() != null){
 			LocalTime lectureStartTime2 = hourToLocalTime(
 					Integer.parseInt((String)startTimeOfDay2.getValue()));
 			int duration2 = Integer.parseInt((String)durationHours2.getValue());
