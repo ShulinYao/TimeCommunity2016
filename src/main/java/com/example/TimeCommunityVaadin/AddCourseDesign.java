@@ -78,7 +78,7 @@ public class AddCourseDesign extends VerticalLayout implements Button.ClickListe
 				i++;
 			// Notification.show("hello"+item.getItemProperty("coursenameid").getValue().toString());
 			    new CommunityViewDesign().initTable(item,i);
-			    //new CommunityViewDesign().Coursetable();
+			    new CommunityViewDesign().Coursetable();
 			 // Notification.show("hello"+String.valueOf(i));
 			} catch (CommitException e) {
 				// TODO Auto-generated catch block
