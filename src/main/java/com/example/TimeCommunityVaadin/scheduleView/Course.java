@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+import com.example.TimeCommunityVaadin.Comment;
+
 public class Course {
 
 	private String name;
@@ -14,6 +16,7 @@ public class Course {
 	private String time = "";
 	private String location = ""; // Not in use
 	private ArrayList<CourseSession> courseSessions;
+	private ArrayList<Comment> comments;
 	//private Comment[] comments;
 	
 	public Course(String name){
@@ -98,6 +101,10 @@ public class Course {
 		return courseSessions.get(0).getTime().toLocalDate();
 	}
 	
+	public void addComment(Comment c){
+		this.comments.add(c);
+	}
+	
 	private String csTimeToString(LocalDateTime ldt, int dur){
 		return ldt.getDayOfWeek().toString() + " " + ldt.getHour() + "-" +
 				ldt.getHour() + dur;
@@ -150,5 +157,14 @@ public class Course {
 	public void setCourseSessions(ArrayList<CourseSession> courseSessions) {
 		this.courseSessions = courseSessions;
 	}
+
+	public ArrayList<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(ArrayList<Comment> comments) {
+		this.comments = comments;
+	}
+	
 	
 }

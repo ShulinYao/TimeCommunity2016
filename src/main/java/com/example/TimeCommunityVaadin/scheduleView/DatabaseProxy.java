@@ -12,7 +12,7 @@ public class DatabaseProxy {
 	
 	private static final DatabaseProxy databaseProxy = new DatabaseProxy();
 	
-	private Course[] courses; //EI KÄYTÖSSÄ
+	private Course[] courses;
 	private final File file;
 	
 	public static DatabaseProxy getDatabaseProxy(){
@@ -41,11 +41,16 @@ public class DatabaseProxy {
 		file.saveData(this);
 	}
 	
+	public void saveCurrentCourses(){
+		file.saveData(this);
+	}
+	
 	private Course[] retrieveCourses(){
 		Course[] courses = file.retrieveCourses();
 		return courses;
 	}
 	
+	/////////////////////////////////////
 	//HYÖDYTTÖMIÄ
 	private Course[] createCourses(){
 		Course c1 = new Course("Test Course");

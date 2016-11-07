@@ -1,5 +1,7 @@
 package com.example.TimeCommunityVaadin;
 
+import java.util.List;
+
 import com.example.TimeCommunityVaadin.scheduleView.Course;
 import com.example.TimeCommunityVaadin.scheduleView.DatabaseProxy;
 import com.vaadin.ui.Button;
@@ -55,7 +57,5 @@ public class CommunityViewView extends CommunityViewDesign implements Button.Cli
 				() -> UI.getCurrent().removeWindow(subwindow));
 		subwindow.setContent(addcourseview);
 		UI.getCurrent().addWindow(subwindow);
-	
-		
 	}
 }
