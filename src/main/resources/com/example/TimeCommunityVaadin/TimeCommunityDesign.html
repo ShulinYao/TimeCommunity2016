@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+ </head> 
+ <body> 
+  <vaadin-absolute-layout width="1205px"> 
+   <vaadin-horizontal-layout width-full height="50px" _id="hlayout" :top="15px" :right="-2px" :left="200px"> 
+    <vaadin-label size-auto plain-text _id="titlelabel" :middle>
+      Time Community 
+    </vaadin-label> 
+    <vaadin-button style-name="Logout" plain-text _id="logout" :center>
+      Logout 
+    </vaadin-button> 
+   </vaadin-horizontal-layout> 
+   <vaadin-horizontal-split-panel immediate width="1000px" height="600px" split-position="15%" _id="hsplit" :top="85px" :right="220px" :left="220px"> 
+    <vaadin-list-select item-caption-mode="id" immediate width="150px" height="600px" _id="listview"> 
+     <option>Community</option> 
+     <option>My Schedule</option> 
+     <option>My Event</option> 
+    </vaadin-list-select> 
+    <vaadin-absolute-layout immediate width="800px" height="550px" _id="communitylayout"></vaadin-absolute-layout> 
+   </vaadin-horizontal-split-panel> 
+  </vaadin-absolute-layout>  
+ </body>
+</html>
