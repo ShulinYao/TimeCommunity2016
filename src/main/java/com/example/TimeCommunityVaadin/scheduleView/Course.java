@@ -16,12 +16,13 @@ public class Course {
 	private String time = "";
 	private String location = ""; // Not in use
 	private ArrayList<CourseSession> courseSessions;
-	private ArrayList<Comment> comments;
+	private ArrayList<Comment> comments;// = new ArrayList<Comment>();
 	//private Comment[] comments;
 	
 	public Course(String name){
 		this.name = name;
 		courseSessions = new ArrayList<CourseSession>();
+		comments = new ArrayList<Comment>();
 	}
 	
 	/*
@@ -102,6 +103,10 @@ public class Course {
 	}
 	
 	public void addComment(Comment c){
+		if(comments == null){
+			System.out.println("Course: addComment: comments is null");
+			comments = new ArrayList<Comment>();
+		}
 		this.comments.add(c);
 	}
 	
@@ -163,7 +168,11 @@ public class Course {
 	}
 
 	public void setComments(ArrayList<Comment> comments) {
-		this.comments = comments;
+		if(comments == null){
+			this.comments = new ArrayList<Comment>();
+		}else{
+			this.comments = comments;
+		}
 	}
 	
 	
