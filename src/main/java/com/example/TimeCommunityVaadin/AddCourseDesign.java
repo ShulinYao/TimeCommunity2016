@@ -12,7 +12,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.DateField;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.Notification;
+
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
